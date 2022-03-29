@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 const Container = styled.div`
   background: #ffffff;
@@ -72,7 +72,7 @@ const BottomText = styled.div`
 `;
 
 const SingleTeam = ({ team }) => {
-  const [starred, setStarred] = useState(true);
+
 
   return (
     <Container>

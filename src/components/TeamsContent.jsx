@@ -1,8 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import { teamsData } from "../data/mockData";
 import SingleTeam from "./SingleTeam";
-import SkeletonSingleTeam from "./SkeletonSingleTeam"
+import SkeletonSingleTeam from "./SkeletonSingleTeam";
 const Container = styled.div`
   /* height: 945px; */
   width: 1008px;
@@ -46,7 +45,7 @@ const TeamsWrapper = styled.div`
   justify-content: space-between;
   align-items: center;
 `;
-const TeamsContent = () => {
+const TeamsContent = ({ teams, loading }) => {
   return (
     <Container>
       <Header>
@@ -54,13 +53,15 @@ const TeamsContent = () => {
           <HeaderLeftText>All Teams</HeaderLeftText>
         </HeaderLeft>
         <HeaderRight>
-          <HeaderRightText>Showing 65 of 65 teams</HeaderRightText>
+          <HeaderRightText>Showing {teams.length} of 9 teams</HeaderRightText>
         </HeaderRight>
       </Header>
       <TeamsWrapper>
-        {teamsData.map((item) => (
-          <SkeletonSingleTeam key={item.id} team={item} />
-        ))}
+        {loading
+          ? teams.map((item) => (
+              <SkeletonSingleTeam key={item.id} team={item} />
+            ))
+          : teams.map((item) => <SingleTeam team={item} key={item.id} />)}
       </TeamsWrapper>
     </Container>
   );

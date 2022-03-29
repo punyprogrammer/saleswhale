@@ -73,7 +73,6 @@ const UserName = styled.h1`
   mix-blend-mode: normal;
   opacity: 0.5;
 `;
-const UserImageContainer = styled.div``;
 const UserImg = styled.img`
   margin-right: 10px;
 `;

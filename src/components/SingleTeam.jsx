@@ -102,13 +102,17 @@ const LeadsText = styled.span`
   opacity: 0.45;
   font-weight: 500;
 `;
-const IconContainer = styled.div`
-  height: 30px;
-  width: 30px;
-`;
+// const IconContainer = styled.div`
+//   height: 30px;
+//   width: 30px;
+// `;
 
 const SingleTeam = ({ team }) => {
   const [starred, setStarred] = useState(true);
+  const applyStarred=()=>{
+
+    setStarred(true)
+  }
 
   return (
     <Container>
@@ -118,7 +122,7 @@ const SingleTeam = ({ team }) => {
           <TeamName>{team.name}</TeamName>
           <TeamCreatedAt>{team.created_at}</TeamCreatedAt>
         </TeamTopDesc>
-        <TeamTopStar src={starred ? ActiveStar : DefaultStar} />
+        <TeamTopStar onClick={applyStarred}src={starred ? ActiveStar : DefaultStar} />
       </Top>
       <Center>
         <TeamCenterDesc>
