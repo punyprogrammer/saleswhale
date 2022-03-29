@@ -5,7 +5,8 @@ import RightContainer from "../components/RightContainer";
 const Container = styled.div`
   display: flex;
 
-  width: 100%;
+  max-width: 100vw;
+  /* overflow-x: hidden; */
   height: 100%;
 `;
 const Home = () => {

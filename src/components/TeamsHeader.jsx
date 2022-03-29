@@ -16,6 +16,8 @@ const Container = styled.div`
   display: flex;
   justify-content: space-between;
   overflow-x: hidden;
+  overflow-y: hidden;
+  width: calc(100vw - 80px);
 `;
 const LeftContainer = styled.div`
   display: flex;
@@ -115,7 +117,7 @@ const SearchInput = styled.input`
 
   font-weight: 600;
 `;
-const TeamsHeader = ({filter,applyFilter,resetTeams}) => {
+const TeamsHeader = ({ filter, applyFilter, resetTeams }) => {
   return (
     <Container>
       <LeftContainer>
@@ -127,15 +129,15 @@ const TeamsHeader = ({filter,applyFilter,resetTeams}) => {
           <FilterContainer>
             <Filter onClick={resetTeams}>
               <FilterText>All</FilterText>
-              <FilterShade selected={filter===null}></FilterShade>
+              <FilterShade selected={filter === null}></FilterShade>
             </Filter>
-            <Filter onClick={()=>applyFilter('is_favorited')}>
+            <Filter onClick={() => applyFilter("is_favorited")}>
               <FilterText>Favourites</FilterText>
-              <FilterShade selected={filter==='is_favorited'}></FilterShade>
+              <FilterShade selected={filter === "is_favorited"}></FilterShade>
             </Filter>
-            <Filter onClick={()=>applyFilter('is_archived')}>
+            <Filter onClick={() => applyFilter("is_archived")}>
               <FilterText>Archived</FilterText>
-              <FilterShade selected={filter==='is_archived'}></FilterShade>
+              <FilterShade selected={filter === "is_archived"}></FilterShade>
             </Filter>
           </FilterContainer>
         </LeftBottom>

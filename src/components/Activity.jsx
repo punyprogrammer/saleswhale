@@ -10,8 +10,8 @@ const Container = styled.div`
   box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.05), 0px 0px 30px rgba(0, 0, 0, 0.1);
   /* height: 460px; */
   width: 316px;
-  margin-right: 30px;
-  margin-left: 30px;
+  margin-right: 20px;
+  margin-left: 20px;
   margin-top: 42px;
   /* max-height: auto; */
 `;
