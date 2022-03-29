@@ -31,6 +31,11 @@ const IconContainer = styled.div`
   align-items: center;
   justify-content: center;
   background-color: ${(props) => props.selected && "#2995DA"};
+  transition: all 0.3s ease-in;
+  &:hover {
+    background-color: #2995da;
+    cursor:pointer;
+  }
 `;
 const IconImg = styled.img``;
 

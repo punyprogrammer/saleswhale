@@ -115,7 +115,7 @@ const SearchInput = styled.input`
 
   font-weight: 600;
 `;
-const TeamsHeader = () => {
+const TeamsHeader = ({filter,applyFilter,resetTeams}) => {
   return (
     <Container>
       <LeftContainer>
@@ -125,17 +125,17 @@ const TeamsHeader = () => {
         </LeftTop>
         <LeftBottom>
           <FilterContainer>
-            <Filter>
+            <Filter onClick={resetTeams}>
               <FilterText>All</FilterText>
-              <FilterShade></FilterShade>
+              <FilterShade selected={filter===null}></FilterShade>
             </Filter>
-            <Filter>
+            <Filter onClick={()=>applyFilter('is_favorited')}>
               <FilterText>Favourites</FilterText>
-              <FilterShade selected></FilterShade>
+              <FilterShade selected={filter==='is_favorited'}></FilterShade>
             </Filter>
-            <Filter>
+            <Filter onClick={()=>applyFilter('is_archived')}>
               <FilterText>Archived</FilterText>
-              <FilterShade></FilterShade>
+              <FilterShade selected={filter==='is_archived'}></FilterShade>
             </Filter>
           </FilterContainer>
         </LeftBottom>
