@@ -7,6 +7,8 @@ const Container = styled.div`
   top: 0;
   position: sticky;
   z-index: 5;
+  width: calc(100vw - 80px);
+  overflow-x:hidden;
   height: 80px;
   background-color: #ffffff;
   box-shadow: 0px 1px 0px #e2e2e2, 0px 0px 4px rgba(0, 0, 0, 0.05);

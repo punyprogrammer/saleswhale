@@ -6,9 +6,10 @@ import TeamsContent from "./TeamsContent";
 import Activity from "./Activity";
 import { teamsData } from "../data/mockData";
 const Container = styled.div`
-  width: calc(100vw - 80px);
+  width: calc(100vw - 90px);
   background-color: #e5e5e5;
   padding-bottom: 50px;
+  overflow-x:hidden;
 `;
 const MainContent = styled.div`
   display: flex;
