@@ -108,11 +108,7 @@ const LeadsText = styled.span`
 // `;
 
 const SingleTeam = ({ team }) => {
-  const [starred, setStarred] = useState(true);
-  const applyStarred=()=>{
-
-    setStarred(true)
-  }
+  const [starred, setStarred] = useState(false);
 
   return (
     <Container>
@@ -122,7 +118,7 @@ const SingleTeam = ({ team }) => {
           <TeamName>{team.name}</TeamName>
           <TeamCreatedAt>{team.created_at}</TeamCreatedAt>
         </TeamTopDesc>
-        <TeamTopStar onClick={applyStarred}src={starred ? ActiveStar : DefaultStar} />
+        <TeamTopStar onClick={()=>setStarred(!starred)}src={starred ? ActiveStar : DefaultStar} />
       </Top>
       <Center>
         <TeamCenterDesc>
